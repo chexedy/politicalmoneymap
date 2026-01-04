@@ -2,8 +2,7 @@ import "./Map.css";
 
 import maplibregl from "maplibre-gl";
 import { useState, useEffect, useRef } from "react";
-
-import Candidate from "./candidates/Candidate.tsx";
+import { Candidate, CandidateHolder, CandidateInfo } from "./candidates";
 
 export default function Map() {
     const [isCandidateOpen, setCandidateOpen] = useState(false);
@@ -104,6 +103,8 @@ export default function Map() {
     return (
         <div>
             <div ref={mapContainer} className="map-container" />
+
+            <Candidate bioguide_id="B001288" name="Cory A. Booker" state="NJ" district={null} party="Democrat" position="SENATE" />
         </div>
     )
 }

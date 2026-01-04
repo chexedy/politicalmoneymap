@@ -1,3 +1,4 @@
+/* Candidate Holder */
 .candidate-holder {
     position: absolute;
     bottom: 5vh;
@@ -7,7 +8,7 @@
     width: 30vw;
 
     background-color: var(--color4);
-    padding: 20px 30px;
+    padding: 20px 20px;
     border-radius: 12px;
     height: 80vh;
 
@@ -31,6 +32,107 @@
     overflow-y: auto;
 }
 
+/* Candidate Info */
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background-color: var(--color1);
+    font-family: "sofia-pro", sans-serif;
+    transition: opacity 1s linear;
+}
+
+.candidate-info button {
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+    align-items: center;
+
+    background: red;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--color2);
+    font-family: "sofia-pro", sans-serif;
+    padding: 0.75vh 2vh;
+    border-radius: 15px;
+}
+
+.candidate-info button:active {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* Candidate */
+.candidate-profile {
+    position: absolute;
+    bottom: 5vh;
+    left: 10vh;
+    z-index: 10;
+    pointer-events: auto;
+    width: 30vw;
+
+    background-color: var(--color4);
+    padding: 20px 20px;
+    border-radius: 12px;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s linear;
+}
+
+.candidate-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 10px;
+
+    background-color: var(--color2);
+}
+
+.candidate-image {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+
+    border-radius: 4px;
+    background-color: var(--color2);
+}
+
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color2);
+}
+
+.candidate-name {
+    margin: 0 0 6px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color4);
+}
+
+/* Role */
+.candidate-role {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color4);
+}
+
+.candidate-party {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color4);
+}
+
 .close-button {
     margin-top: auto;
     align-self: center;
@@ -52,16 +154,6 @@
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 1024px) {
-    .candidate-holder {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 70vw;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .candidate-holder {
         width: 90vw;
@@ -70,6 +162,36 @@
     .candidate-holder h1 {
         margin: 0;
         font-size: 1.5rem;
-        color: var(--color2);
+    }
+
+    .candidate-info h2 {
+        font-size: 2rem;
+    }
+
+    .candidate-info h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .candidate-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .candidate-holder {
+        width: 80vw;
+    }
+
+    .candidate-info h2 {
+        font-size: 3rem;
+    }
+
+    .candidate-info h3 {
+        font-size: 2rem;
     }
 }
