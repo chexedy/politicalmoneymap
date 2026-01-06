@@ -1,0 +1,107 @@
+CREATE TABLE candidates (
+    id INTEGER PRIMARY KEY,
+    bioguide_id TEXT UNIQUE NOT NULL,
+    fec_id TEXT UNIQUE,
+    office TEXT NOT NULL,
+    state TEXT NOT NULL,
+    district TEXT,
+    party TEXT,
+    is_current BOOLEAN NOT NULL,
+    name TEXT NOT NULL,
+    latest_cycle INTEGER
+);
+
+CREATE TABLE multi_candidates (
+    state TEXT NOT NULL,
+    office TEXT NOT NULL,
+    candidate_1 INTEGER NOT NULL,
+    candidate_2 INTEGER NOT NULL,
+    PRIMARY KEY(state, office),
+    FOREIGN KEY (candidate_1) REFERENCES candidates(id) ON DELETE CASCADE,
+    FOREIGN KEY (candidate_2) REFERENCES candidates(id) ON DELETE CASCADE
+);
+
+CREATE TABLE sectors (
+    sector_id SERIAL PRIMARY KEY,
+    sector_name TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE industries (
+    industry_id SERIAL PRIMARY KEY,
+    industry_name TEXT UNIQUE NOT NULL,
+    sector_id INTEGER NOT NULL,
+    FOREIGN KEY (sector_id) REFERENCES sectors(sector_id)
+);
+
+CREATE TABLE committees (
+    fec_committee_id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    connected_organization TEXT,
+    committee_type TEXT,
+    industry_id INTEGER,
+    sector_id INTEGER,
+    FOREIGN KEY (industry_id) REFERENCES industries(industry_id),
+    FOREIGN KEY (sector_id) REFERENCES sectors(sector_id)
+);
+
+CREATE TABLE contributions_raw (
+    id INTEGER PRIMARY KEY,
+    fec_transaction_id TEXT UNIQUE NOT NULL,
+    candidate_id INTEGER NOT NULL,
+    fec_committee_id TEXT,
+    contributor_name TEXT,
+    contributor_employer TEXT,
+    contributor_occupation TEXT,
+    amount NUMERIC NOT NULL,
+    date DATE NOT NULL,
+    cycle INTEGER NOT NULL,
+
+    FOREIGN KEY (candidate_id) REFERENCES candidates(id),
+    FOREIGN KEY (fec_committee_id) REFERENCES committees(fec_committee_id)
+);
+
+CREATE TABLE classification_rules (
+    id SERIAL PRIMARY KEY,
+    match_field TEXT NOT NULL CHECK (
+        match_field IN ('employer', 'occupation', 'committee')
+    ),
+    match_value TEXT NOT NULL,
+    industry_id INTEGER NOT NULL,
+    confidence TEXT CHECK (confidence IN ('high', 'medium', 'low')),
+
+    FOREIGN KEY (industry_id) REFERENCES industries(industry_id)
+);
+
+CREATE TABLE contributions_classified (
+    raw_contribution_id INTEGER PRIMARY KEY,
+    industry_id INTEGER,
+    sector_id INTEGER,
+    confidence TEXT CHECK (confidence IN ('high', 'medium', 'low')),
+    classifier_version TEXT,
+
+    FOREIGN KEY (raw_contribution_id)
+        REFERENCES contributions_raw(id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (industry_id)
+        REFERENCES industries(industry_id),
+
+    FOREIGN KEY (sector_id)
+        REFERENCES sectors(sector_id)
+);
+
+CREATE TABLE candidate_sector_totals (
+    candidate_id INTEGER NOT NULL,
+    cycle INTEGER NOT NULL,
+    sector_id INTEGER NOT NULL,
+    total_amount NUMERIC NOT NULL,
+
+    PRIMARY KEY (candidate_id, cycle, sector_id),
+
+    FOREIGN KEY (candidate_id)
+        REFERENCES candidates(id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (sector_id)
+        REFERENCES sectors(sector_id)
+);

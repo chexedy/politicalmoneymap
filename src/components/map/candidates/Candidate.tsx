@@ -1,5 +1,5 @@
 import "./Candidate.css";
-import { PARTIES, STATE_2CHAR } from "../../../data/info";
+import { STATE_2CHAR } from "../../../data/info";
 import type { CandidateProps } from "../../../data/props";
 
 // This is the actual Candidate component with their information
@@ -9,13 +9,8 @@ export default function Candidate({
     state,
     district,
     party,
-    position,
+    office,
 }: CandidateProps) {
-    const partyLabel =
-        party in PARTIES
-            ? PARTIES[party as keyof typeof PARTIES]
-            : party;
-
     const stateLabel =
         state in STATE_2CHAR
             ? STATE_2CHAR[state as keyof typeof STATE_2CHAR]
@@ -30,16 +25,16 @@ export default function Candidate({
                     className="candidate-image"
                 />
 
-                <div className="candidate-info">
+                <div className="candidate-bio">
                     <h1 className="candidate-name">{name}</h1>
 
-                    {position === "SENATE" && (
+                    {office === "SENATE" && (
                         <div className="candidate-role">
-                            U.S. Senator — {stateLabel}
+                            U.S. Senator for {stateLabel}
                         </div>
                     )}
 
-                    {position === "HOUSE" && (
+                    {office === "HOUSE" && (
                         <div className="candidate-role">
                             U.S. Representative — {stateLabel}-{district}
                         </div>
@@ -48,6 +43,8 @@ export default function Candidate({
                     <div className="candidate-party">{party}</div>
                 </div>
             </div>
+
+            <h6 className="candidate-id">BioGuide ID: {bioguide_id} | FEC ID: { }</h6>
 
             <button className="close-button">
                 Close Profile

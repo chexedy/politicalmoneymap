@@ -6,6 +6,7 @@
             "id": "01",
             "properties": {
                 "name": "Alabama",
+                "abbreviation": "AL",
                 "density": 94.65
             },
             "geometry": {
@@ -153,6 +154,7 @@
             "id": "02",
             "properties": {
                 "name": "Alaska",
+                "abbreviation": "AK",
                 "density": 1.264
             },
             "geometry": {
@@ -4618,6 +4620,7 @@
             "id": "04",
             "properties": {
                 "name": "Arizona",
+                "abbreviation": "AZ",
                 "density": 57.05
             },
             "geometry": {
@@ -4761,6 +4764,7 @@
             "id": "05",
             "properties": {
                 "name": "Arkansas",
+                "abbreviation": "AR",
                 "density": 56.43
             },
             "geometry": {
@@ -4924,6 +4928,7 @@
             "id": "06",
             "properties": {
                 "name": "California",
+                "abbreviation": "CA",
                 "density": 241.7
             },
             "geometry": {
@@ -5311,6 +5316,7 @@
             "id": "08",
             "properties": {
                 "name": "Colorado",
+                "abbreviation": "CO",
                 "density": 49.33
             },
             "geometry": {
@@ -5390,6 +5396,7 @@
             "id": "09",
             "properties": {
                 "name": "Connecticut",
+                "abbreviation": "CT",
                 "density": 739.1
             },
             "geometry": {
@@ -5469,6 +5476,7 @@
             "id": "10",
             "properties": {
                 "name": "Delaware",
+                "abbreviation": "DE",
                 "density": 464.3
             },
             "geometry": {
@@ -5536,6 +5544,7 @@
             "id": "11",
             "properties": {
                 "name": "District of Columbia",
+                "abbreviation": "DC",
                 "density": 10065
             },
             "geometry": {
@@ -5571,6 +5580,7 @@
             "id": "12",
             "properties": {
                 "name": "Florida",
+                "abbreviation": "FL",
                 "density": 353.4
             },
             "geometry": {
@@ -5898,6 +5908,7 @@
             "id": "13",
             "properties": {
                 "name": "Georgia",
+                "abbreviation": "GA",
                 "density": 169.5
             },
             "geometry": {
@@ -6117,6 +6128,7 @@
             "id": "15",
             "properties": {
                 "name": "Hawaii",
+                "abbreviation": "HI",
                 "density": 214.1
             },
             "geometry": {
@@ -6346,6 +6358,7 @@
             "id": "16",
             "properties": {
                 "name": "Idaho",
+                "abbreviation": "ID",
                 "density": 19.15
             },
             "geometry": {
@@ -6625,6 +6638,7 @@
             "id": "17",
             "properties": {
                 "name": "Illinois",
+                "abbreviation": "IL",
                 "density": 231.5
             },
             "geometry": {
@@ -6908,6 +6922,7 @@
             "id": "18",
             "properties": {
                 "name": "Indiana",
+                "abbreviation": "IN",
                 "density": 181.7
             },
             "geometry": {
@@ -7107,6 +7122,7 @@
             "id": "19",
             "properties": {
                 "name": "Iowa",
+                "abbreviation": "IA",
                 "density": 54.81
             },
             "geometry": {
@@ -7322,6 +7338,7 @@
             "id": "20",
             "properties": {
                 "name": "Kansas",
+                "abbreviation": "KS",
                 "density": 35.09
             },
             "geometry": {
@@ -7389,6 +7406,7 @@
             "id": "21",
             "properties": {
                 "name": "Kentucky",
+                "abbreviation": "KY",
                 "density": 110
             },
             "geometry": {
@@ -7704,6 +7722,7 @@
             "id": "22",
             "properties": {
                 "name": "Louisiana",
+                "abbreviation": "LA",
                 "density": 105
             },
             "geometry": {
@@ -8023,6 +8042,7 @@
             "id": "23",
             "properties": {
                 "name": "Maine",
+                "abbreviation": "ME",
                 "density": 43.04
             },
             "geometry": {
@@ -8302,6 +8322,7 @@
             "id": "24",
             "properties": {
                 "name": "Maryland",
+                "abbreviation": "MD",
                 "density": 596.3
             },
             "geometry": {
@@ -8579,6 +8600,7 @@
             "id": "25",
             "properties": {
                 "name": "Massachusetts",
+                "abbreviation": "MA",
                 "density": 840.2
             },
             "geometry": {
@@ -8734,6 +8756,7 @@
             "id": "26",
             "properties": {
                 "name": "Michigan",
+                "abbreviation": "MI",
                 "density": 173.9
             },
             "geometry": {
@@ -9371,6 +9394,7 @@
             "id": "27",
             "properties": {
                 "name": "Minnesota",
+                "abbreviation": "MN",
                 "density": 67.14
             },
             "geometry": {
@@ -9718,6 +9742,7 @@
             "id": "28",
             "properties": {
                 "name": "Mississippi",
+                "abbreviation": "MS",
                 "density": 63.50
             },
             "geometry": {
@@ -9917,6 +9942,7 @@
             "id": "29",
             "properties": {
                 "name": "Missouri",
+                "abbreviation": "MO",
                 "density": 87.26
             },
             "geometry": {
@@ -10144,6 +10170,7 @@
             "id": "30",
             "properties": {
                 "name": "Montana",
+                "abbreviation": "MT",
                 "density": 6.858
             },
             "geometry": {
@@ -10367,6 +10394,7 @@
             "id": "31",
             "properties": {
                 "name": "Nebraska",
+                "abbreviation": "NE",
                 "density": 23.97
             },
             "geometry": {
@@ -10498,6 +10526,7 @@
             "id": "32",
             "properties": {
                 "name": "Nevada",
+                "abbreviation": "NV",
                 "density": 24.80
             },
             "geometry": {
@@ -10597,6 +10626,7 @@
             "id": "33",
             "properties": {
                 "name": "New Hampshire",
+                "abbreviation": "NH",
                 "density": 147
             },
             "geometry": {
@@ -10724,6 +10754,7 @@
             "id": "34",
             "properties": {
                 "name": "New Jersey",
+                "abbreviation": "NJ",
                 "density": 1189
             },
             "geometry": {
@@ -10867,6 +10898,7 @@
             "id": "35",
             "properties": {
                 "name": "New Mexico",
+                "abbreviation": "NM",
                 "density": 17.16
             },
             "geometry": {
@@ -10950,6 +10982,7 @@
             "id": "36",
             "properties": {
                 "name": "New York",
+                "abbreviation": "NY",
                 "density": 412.3
             },
             "geometry": {
@@ -11237,6 +11270,7 @@
             "id": "37",
             "properties": {
                 "name": "North Carolina",
+                "abbreviation": "NC",
                 "density": 198.2
             },
             "geometry": {
@@ -11496,6 +11530,7 @@
             "id": "38",
             "properties": {
                 "name": "North Dakota",
+                "abbreviation": "ND",
                 "density": 9.916
             },
             "geometry": {
@@ -11575,6 +11610,7 @@
             "id": "39",
             "properties": {
                 "name": "Ohio",
+                "abbreviation": "OH",
                 "density": 281.9
             },
             "geometry": {
@@ -11778,6 +11814,7 @@
             "id": "40",
             "properties": {
                 "name": "Oklahoma",
+                "abbreviation": "OK",
                 "density": 55.22
             },
             "geometry": {
@@ -11973,6 +12010,7 @@
             "id": "41",
             "properties": {
                 "name": "Oregon",
+                "abbreviation": "OR",
                 "density": 40.33
             },
             "geometry": {
@@ -12212,6 +12250,7 @@
             "id": "42",
             "properties": {
                 "name": "Pennsylvania",
+                "abbreviation": "PA",
                 "density": 284.3
             },
             "geometry": {
@@ -12359,6 +12398,7 @@
             "id": "44",
             "properties": {
                 "name": "Rhode Island",
+                "abbreviation": "RI",
                 "density": 1006
             },
             "geometry": {
@@ -12440,6 +12480,7 @@
             "id": "45",
             "properties": {
                 "name": "South Carolina",
+                "abbreviation": "SC",
                 "density": 155.4
             },
             "geometry": {
@@ -12631,6 +12672,7 @@
             "id": "46",
             "properties": {
                 "name": "South Dakota",
+                "abbreviation": "SD",
                 "density": 98.07
             },
             "geometry": {
@@ -12762,6 +12804,7 @@
             "id": "47",
             "properties": {
                 "name": "Tennessee",
+                "abbreviation": "TN",
                 "density": 88.08
             },
             "geometry": {
@@ -12949,6 +12992,7 @@
             "id": "48",
             "properties": {
                 "name": "Texas",
+                "abbreviation": "TX",
                 "density": 98.07
             },
             "geometry": {
@@ -13572,6 +13616,7 @@
             "id": "49",
             "properties": {
                 "name": "Utah",
+                "abbreviation": "UT",
                 "density": 34.30
             },
             "geometry": {
@@ -13635,6 +13680,7 @@
             "id": "50",
             "properties": {
                 "name": "Vermont",
+                "abbreviation": "VT",
                 "density": 67.73
             },
             "geometry": {
@@ -13762,6 +13808,7 @@
             "id": "51",
             "properties": {
                 "name": "Virginia",
+                "abbreviation": "VA",
                 "density": 204.5
             },
             "geometry": {
@@ -14107,6 +14154,7 @@
             "id": "53",
             "properties": {
                 "name": "Washington",
+                "abbreviation": "WA",
                 "density": 102.6
             },
             "geometry": {
@@ -14420,6 +14468,7 @@
             "id": "54",
             "properties": {
                 "name": "West Virginia",
+                "abbreviation": "WV",
                 "density": 77.06
             },
             "geometry": {
@@ -14695,6 +14744,7 @@
             "id": "55",
             "properties": {
                 "name": "Wisconsin",
+                "abbreviation": "WI",
                 "density": 105.2
             },
             "geometry": {
@@ -15010,6 +15060,7 @@
             "id": "56",
             "properties": {
                 "name": "Wyoming",
+                "abbreviation": "WY",
                 "density": 5.851
             },
             "geometry": {
@@ -15077,6 +15128,7 @@
             "id": "72",
             "properties": {
                 "name": "Puerto Rico",
+                "abbreviation": "PR",
                 "density": 1082
             },
             "geometry": {

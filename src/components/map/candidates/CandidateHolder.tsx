@@ -7,8 +7,8 @@ export default function CandidateHolder() {
             <h1>Select Politician</h1>
 
             <div className="candidate-list">
-                <CandidateInfo name="Cory A. Booker" state="NJ" district={null} party="Democrat" position="SENATE" />
-                <CandidateInfo name="Nellie A. Pou" state="NJ" district="9" party="Democrat" position="HOUSE" />
+                {/* <CandidateInfo name="Cory A. Booker" state="NJ" district={null} party="Democrat" office="SENATE" />
+                <CandidateInfo name="Andrew Kim" state="NJ" district={null} party="Democrat" office="SENATE" /> */}
             </div>
 
             <button className="close-button">

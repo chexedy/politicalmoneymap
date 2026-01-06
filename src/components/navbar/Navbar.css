@@ -71,11 +71,16 @@
     transition: 0.3s;
 }
 
+@media screen and (max-width: 767px) {
+    .navbar-title {
+        font-size: 1.5vh;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .navbar-title {
         align-self: center;
         margin: 0 2.5vh;
-        font-size: 2vh;
     }
 
     .navbar-buttons {
@@ -113,5 +118,11 @@
         font-size: 5vh;
         text-align: center;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .navbar-title {
+        font-size: 2vh;
     }
 }

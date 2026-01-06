@@ -8,7 +8,7 @@ export default function CandidateInfo({
     state,
     district,
     party,
-    position,
+    office,
 }: CandidateInfoProps) {
     const partyLabel =
         party in PARTIES
@@ -23,11 +23,11 @@ export default function CandidateInfo({
     return (
         <div className="candidate-info">
             <h2>{name}</h2>
-            {(position == "SENATE") && (
+            {(office == "SENATE") && (
                 <h3>Senator ({partyLabel}) for {stateLabel}</h3>
             )}
 
-            {(position == "HOUSE") && (
+            {(office == "HOUSE") && (
                 <h3>Representative ({partyLabel}) for {state + "-" + district}</h3>
             )}
 

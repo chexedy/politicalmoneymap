@@ -12,9 +12,6 @@ export default function About() {
                     This project provides a visual and educational overview of publicly available political campaign finance data in the United States. It is designed to help users explore how corporate and organizational campaign funding intersects with elected offices at the federal level.
                     <br />
                     <br />
-                    This project provides a visual and educational overview of publicly available political campaign finance data in the United States. It is designed to help users explore how corporate and organizational campaign funding intersects with elected offices at the federal level.
-                    <br />
-                    <br />
                     All information displayed on this site is derived from official government sources, primarily the Federal Election Commission (FEC). The data is presented in an accessible, map-based format to promote transparency and public understanding of campaign finance disclosures.
                 </p>
             </div>
@@ -70,7 +67,7 @@ export default function About() {
 
             <div className="body">
                 <p>
-                    For questions, feedback, or media inquiries, please make an issue on the site's <a href="https://github.com/chexedy/uslobbying" target="_blank">GitHub</a>. Please be clear and concise about the problem, and I will look into the issue ASAP.
+                    For questions, feedback, or media inquiries, please make an issue on the site's <a href="https://github.com/chexedy/politicalmoneymap" target="_blank">GitHub</a>. Please be clear and concise about the problem, and I will look into the issue ASAP.
                 </p>
             </div>
         </div>

@@ -104,7 +104,8 @@ export default function Map() {
         <div>
             <div ref={mapContainer} className="map-container" />
 
-            <Candidate bioguide_id="B001288" name="Cory A. Booker" state="NJ" district={null} party="Democrat" position="SENATE" />
+            {/* <CandidateHolder /> */}
+            {/* <Candidate bioguide_id="B001288" name="Cory A. Booker" state="NJ" district={null} party="Democrat" office="SENATE" /> */}
         </div>
     )
 }
