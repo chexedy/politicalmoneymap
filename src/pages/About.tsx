@@ -1,6 +1,28 @@
 import "./About.css";
+import { useQuery } from '@tanstack/react-query';
+
+import { convertSQLTimetoText } from '../helpers/functions';
 
 export default function About() {
+    const {
+        data: last_updated,
+        isSuccess,
+        isLoading,
+        isError,
+    } = useQuery({
+        queryKey: ['last_updated'],
+        staleTime: Infinity,
+        queryFn: async () => {
+            const response = await fetch('https://uslobbying-api.ayaan7m.workers.dev/dataupdates');
+            return (await response.json());
+        }
+    });
+
+    interface data_updates {
+        table_name: string;
+        last_updated: string;
+    }
+
     return (
         <div className="about">
             <div className="title">
@@ -54,10 +76,27 @@ export default function About() {
 
             <div className="body">
                 <p>
-                    All data is sourced from the <a href="https://www.fec.gov/" target="_blank">Federal Election Commission (FEC)</a> and <a href="https://www.indepthgov.com/" target="_blank">InDepthGov</a>.
+                    All data is sourced from the <a href="https://www.fec.gov/" target="_blank">Federal Election Commission (FEC)</a> and the <a href="https://unitedstates.github.io/" target="_blank">@unitedstates</a> project.
                     <br />
                     <br />
+                </p>
+
+                <h1>
                     Data was last updated on:
+                    {isLoading && <span> Loading...</span>}
+                    {isError && <span> Error fetching data. Try again later.</span>}
+                </h1>
+
+                <p>
+                    {isSuccess && (
+                        <ul>
+                            {last_updated.data.map((table: data_updates) => (
+                                <li> {table.table_name} - {convertSQLTimetoText(table.last_updated)}</li>
+                            ))}
+                        </ul>
+                    )}
+
+                    The date is in your local timezone.
                 </p>
             </div>
 

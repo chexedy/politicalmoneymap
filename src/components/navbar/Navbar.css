@@ -126,3 +126,15 @@
         font-size: 2vh;
     }
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1186px) {
+    .navbar-title {
+        font-size: 1.75vh;
+    }
+}
+
+@media screen and (min-width: 1187px) and (max-width: 1373px) {
+    .navbar-title {
+        font-size: 2vh;
+    }
+}

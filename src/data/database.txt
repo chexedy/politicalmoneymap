@@ -1,3 +1,5 @@
+- The various database schemas since I keep forgetting
+
 CREATE TABLE candidates (
     id INTEGER PRIMARY KEY,
     bioguide_id TEXT UNIQUE NOT NULL,

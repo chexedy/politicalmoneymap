@@ -28,7 +28,12 @@
   border-radius: 25px;
 }
 
-.body p {
+.body h1 {
+  font-size: 4vh;
+}
+
+.body p,
+.body ul {
   font-size: 3vh;
 }
 
@@ -53,7 +58,8 @@
     padding: 3vh;
   }
 
-  .body p {
+  .body p,
+  .body ul {
     font-size: 2vh;
   }
 }

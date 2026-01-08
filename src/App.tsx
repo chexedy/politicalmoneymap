@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Home, Groups, Scores, About } from "./pages";
+import { Home, Data, Groups, Scores, About } from "./pages";
 import { Navbar } from "./components";
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/data" element={<Data />} />
             <Route path="/groups" element={<Groups />} />
             <Route path="/scores" element={<Scores />} />
             <Route path="/about" element={<About />} />
